@@ -20,7 +20,7 @@ class Task:
 
     taskid: int = 0
 
-    def __init__(self, coroutine) -> None:
+    def __init__(self, coroutine: Generator[any, any, any]) -> None:
         """
         Initialize a new Task instance.
 
