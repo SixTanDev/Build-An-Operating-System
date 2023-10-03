@@ -28,6 +28,9 @@ class Task:
             coroutine (generator): The coroutine to be associated with the task.
         """
 
+        if not isinstance(coroutine, Generator):
+            raise TypeError("coroutine must be a generator")
+
         Task.taskid += 1
         self.tid: int = Task.taskid
         self.coroutine: Generator[any, any, any] = coroutine
