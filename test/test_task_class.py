@@ -36,7 +36,7 @@ class TestTask(unittest.TestCase):
         Test creating a Task with an invalid coroutine.
         """
         with self.assertRaises(TypeError):
-            task = Task(None)
+            _ = Task(None)
 
     def test_multiple_task_creation(self):
         """

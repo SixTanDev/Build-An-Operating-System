@@ -1,18 +1,29 @@
+# pylint: disable=R1708,C0115
+
 import unittest
 from app.my_asyncio import Scheduler
 from app.my_asyncio.task import Task
 
 
-def simple_coroutine():
+def simple_coroutine() -> None:
+    """
+    This function is part of the test suite.
+    """
     yield
     yield
 
 
-def simple_coroutine_1():
+def simple_coroutine_1() -> None:
+    """
+    This function is part of the test suite.
+    """
     yield
 
 
-def simple_coroutine_2():
+def simple_coroutine_2() -> None:
+    """
+    This function is part of the test suite.
+    """
     yield
 
 
@@ -66,11 +77,11 @@ class TestScheduler(unittest.TestCase):
         Test handling of StopIteration when a task is completed.
         """
 
-        def simple_coroutine():
+        def coroutine():
             yield
             raise StopIteration("Task Completed")
 
-        task = Task(simple_coroutine())
+        task = Task(coroutine())
         self.scheduler.schedule(task)
         self.scheduler.run_event_loop()
         self.assertFalse(self.scheduler.taskmap)
