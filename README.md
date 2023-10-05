@@ -4,6 +4,31 @@ Welcome to the Awesome Async Adventures repository! 🎉
 
 Are you ready to dive into the world of multitasking, coroutines, and async magic? This repository is your gateway to understanding how multitasking can be achieved using a single thread and the power of coroutines. 🧙‍♂️
 
+
+# Running in Docker 🐳
+To run this project in a Docker container, you can use the provided Makefile. Here are some useful commands:
+
+| Detail command                       |      Command      |
+|------------------------------------- |:-----------------:|
+| Build the Docker image               |  make build       |
+| Run the Docker container             |    make run       |
+| Start an existing container          | make start        |
+| Stop an existing container           | make stop         |
+| Restart the container                | make restart      |
+| Interact with the running container  | make interact     |
+| Delete the container and image       | make delete       |
+| Delete only the container            | make delete_cnt   |
+
+
+# Using Poetry for Development 📝
+You can also set up a development environment using Poetry. Here are the steps to install Poetry and create your environment:
+
+Install Poetry (if not already installed):
+
+1. curl -sSL https://install.python-poetry.org | python -
+2. poetry install
+3. poetry shell
+
 ## What's Inside? 📦
 
 Inside this repository, you'll find an exhilarating journey through the heart of multitasking and asynchronous programming. We've got a bunch of cool classes and examples to help you grasp these concepts:
