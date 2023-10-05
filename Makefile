@@ -2,7 +2,7 @@ build:
 	docker build -t my_asyncio -f ./docker/Dockerfile .
 
 run:
-	docker run -v `pwd`/app:/app --name my_asyncio my_asyncio
+	docker run -v `pwd`:/app --name my_asyncio my_asyncio
 
 start:
 	docker start my_asyncio
@@ -14,7 +14,7 @@ restart:
 	docker restart my_asyncio
 
 interact:
-	docker exec -it my_asyncio /bin/sh
+	docker exec -it my_asyncio /bin/bash
 
 delete: stop
 	docker rm my_asyncio; docker rmi my_asyncio
