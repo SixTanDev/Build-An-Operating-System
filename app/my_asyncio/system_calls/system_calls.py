@@ -1,4 +1,4 @@
-# # pylint: disable=W0107,E1101
+# pylint: disable=W0107,E1101
 
 from __future__ import annotations
 from abc import ABC, abstractmethod
