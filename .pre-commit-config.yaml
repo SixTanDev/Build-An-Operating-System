@@ -7,7 +7,7 @@ repos:
         language: system
         types: [python]
         stages: [commit]
-        args: [ "./app", "./test" ]
+        args: [ "--rcfile=pylint.cfg", "./app", "./test" ]
 
     -   id: bandit
         name: bandit
