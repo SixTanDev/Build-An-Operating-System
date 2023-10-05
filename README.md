@@ -4,13 +4,12 @@ Welcome to the Awesome Async Adventures repository! 🎉
 
 Are you ready to dive into the world of multitasking, coroutines, and async magic? This repository is your gateway to understanding how multitasking can be achieved using a single thread and the power of coroutines. 🧙‍♂️
 
-
 # Running in Docker 🐳
 To run this project in a Docker container, you can use the provided Makefile. Here are some useful commands:
 
 | Detail command                       |      Command      |
 |------------------------------------- |:-----------------:|
-| Build the Docker image               |  make build       |
+| Build the Docker image               |  sudo make build  |
 | Run the Docker container             |    make run       |
 | Start an existing container          | make start        |
 | Stop an existing container           | make stop         |
@@ -28,6 +27,14 @@ Install Poetry (if not already installed):
 1. curl -sSL https://install.python-poetry.org | python -
 2. poetry install
 3. poetry shell
+
+## NOTE:
+If you're using the Poetry environment and encounter **IMPORT ERRORS** when running the examples, whether in debug or normal mode using the python ```examples/example0.py``` command, you may need to configure the ```PYTHONPATH``` environment variable to point to the location where you have cloned the repository.
+
+For instance, if you have cloned the repository in the ```Download``` folder, you can set the ```PYTHONPATH``` as follows in a Linux environment:
+
+```export PYTHONPATH=/Users/my_user/Downloads/Build-An-Operating-System```
+
 
 ## What's Inside? 📦
 
