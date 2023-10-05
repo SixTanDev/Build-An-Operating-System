@@ -57,6 +57,17 @@ class Scheduler:
         self.schedule(new_task)
         return new_task.tid
 
+    def exit(self, task: Task) -> None:
+        """
+        Handle the exit of a task.
+
+        Args:
+            task (Task): The task that has completed and is exiting.
+        """
+
+        print(f"Task {task.tid} completed")
+        del self.taskmap[task.tid]
+
     def run_event_loop(self) -> None:
         """
         Main event loop for the scheduler.
@@ -74,5 +85,6 @@ class Scheduler:
                     result.handler()
                     continue
             except StopIteration:
+                self.exit(task)
                 continue
             self.schedule(task)
